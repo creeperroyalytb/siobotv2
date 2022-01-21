@@ -2,4 +2,4 @@
 
 # bot français 
 
-# par Askarm (Askarm#9232
+# par Askarm (Askarm#9232)
