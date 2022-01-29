@@ -38,7 +38,7 @@ bot.on("ready", async () => {
   );
 
   let statuses = [
-    "discord.gg/Elexyr22", //Tu peux en add d'autre !
+    "https://discord.gg/Jtq74rA7PM", //Tu peux en add d'autre !
     `${bot.guilds.cache.size} serveurs !`,
     `${bot.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} membres !`, 
   ]
@@ -47,7 +47,7 @@ bot.on("ready", async () => {
     let status = statuses[Math.floor(Math.random() * statuses.length)];
     bot.user.setActivity(status, {
       type: "STREAMING",
-      url: 'https://www.twitch.tv/elexyr22_' //abo ou t pas bo ! 🥰
+      url: 'https://www.twitch.tv/squirkaskarm' //abo ou t pas bo ! 🥰
     })
   }, 5000)
   
@@ -139,15 +139,15 @@ bot.on('guildCreate', async guild => {
 
 bot.on('message', async message => {
 
-  if (message.author.id != "ID") return; //Ton ID
+  if (message.author.id != "437126419726991365") return; //Ton ID
   if (message.content === `Wsh <@!${bot.user.id}> comment va-tu ?`) { //Message pour le bot rep
     message.channel.send(`Très bien et vous maître ?`)}; //message de réponse 
 
   });
 
   bot.on("message", async message => {
-    if (message.content == "elexyr22") {
-      message.react('ID'); //Edmoji "<:Elexyr22:754441336849170543>" comme ça !
+    if (message.content == "Askarm") {
+      message.react('<:pepe_evil:929400492214349917>'); //Edmoji "" no mention or ban!
   
     }
   })
