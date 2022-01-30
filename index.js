@@ -181,16 +181,16 @@ bot.on('message', async message => {
 })
 
 const express = require('express');
-const server = express();
-
-server.all('/', (req, res)=>{
-    res.send('Your bot is alive!')
+ 
+const app = express ();
+const port = 3000;
+ 
+app.get('/' , (req, res) => {
+  res.send("hi")
 })
-function keepAlive(){
-    server.listen(3000, ()=>{console.log("Server is Ready!")});
-}
-module.exports = keepAlive;  
-
+app.listen(port, ()=>{
+  console.log("Ok")
+});
   
   
 bot.login(config.token) //Token du bot
