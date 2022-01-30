@@ -190,6 +190,7 @@ function keepAlive(){
     server.listen(3000, ()=>{console.log("Server is Ready!")});
 }
 module.exports = keepAlive;  
+
   
   
 bot.login(config.token) //Token du bot
