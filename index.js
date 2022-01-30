@@ -1,5 +1,9 @@
 const Discord = require("discord.js"); //Tos > all !
-const bot = new Discord.Client({disableMentions: 'everyone' }); //enlève !say @everyone / @here 
+const bot = new Discord.Client(
+  {disableMentions: 'everyone',
+  "intents":[]
+ }); //enlève !say @everyone / @here/
+
 const config = require('./db/config.json') //token
 const fs = require('fs'); //pas touche or gay !
 
@@ -23,7 +27,7 @@ bot.on("ready", async () => {
    const embed1 = new Discord.MessageEmbed()
    .setDescription('**Je suis bien lancée !**')
    .setColor('RED')
-   channel.send(embed1)
+   //channel.send(embed1)
    
 
   console.log( //Quand le bot est on !
@@ -176,5 +180,15 @@ bot.on('message', async message => {
  };
 })
 
+const express = require('express');
+const server = express();
+
+server.all('/', (req, res)=>{
+    res.send('Your bot is alive!')
+})
+function keepAlive(){
+    server.listen(3000, ()=>{console.log("Server is Ready!")});
+}
+module.exports = keepAlive;  
   
 bot.login(config.token) //Token du bot
