@@ -14,7 +14,7 @@ module.exports.run = async(bot,message,args) => {
         .setAuthor(`Nom du bot : ${user.tag}`)
         .setDescription(`Invitation __avec__ Perm : https://discordapp.com/oauth2/authorize?client_id=${user.id}&scope=bot&permissions=2146958847 \n\n Invitation __sans__ Perm : https://discordapp.com/oauth2/authorize?client_id=${user.id}&scope=bot&permissions=0\n\n`)
         .setTimestamp()
-        .setFooter('By Elexyr22#0022', 'https://cdn.discordapp.com/attachments/765158755905961984/793196593821646868/PP_du_Serveur.gif')
+        .setFooter('By Askarm#9232 and n'y X3F200C#2871', 'https://media.discordapp.net/attachments/928454061446017077/937432389892845618/standard.gif')
   message.channel.send(embed)  
   }
 
